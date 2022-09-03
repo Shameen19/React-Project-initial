@@ -1,0 +1,151 @@
+Different ways to display content in react on chrome:
+1-
+ReactDom.render(<div>
+                <h1>Shameen Portfolio</h1>
+                <h2>Picture</h2>
+                </div>, document.getElementbyId("root"));
+
+2-const h1=document.createElement("h1");
+  h1.textContent="Hi, this is react native";
+  h1.ClassName="header";
+  document.getElementById("root").append(h1);
+
+3-function Navbar()
+{
+   return
+(
+<div>
+<h1>Rendering react native throgh function</h1>
+</div>
+)
+}
+
+ReactDOM.render( <div>
+                 <Navbar />
+                </div>, document.getElementById("root));
+
+4-const h1=document.createElement("h1");
+   h1.textContent="Hi, this is first";
+   h1.className="Header"
+    console.log(h1);
+   const element=<h1 className="Header">react native</h1>
+   console.log(element);
+   ReactDOM.render(element,document.getElementById("root));
+
+5-ReactDOM.render(
+                  <div>
+                  <h1 className="header"> JSx</h1> 
+                  <p>Intro to React</p>
+                   </div>,document.getElementbyId("root"));
+6-const nav=(
+            <nav>
+            <h1>THis is react</h1>
+            <h2>This is second</h2>
+            </nav>
+            )
+ReactDOM.render(nav,document.getElementById("root));
+
+7- const nav=(
+            <nav>
+            <h1>THis is react</h1>
+            <h2>This is second</h2>
+            </nav>
+            )
+document.getElementById("root).append(nav);  //Retunrs [object Object]
+document.getElementById("root").append(JSON.stringify(nav));
+
+
+
+
+css
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'Hosefin Sans',sans-serif;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:10px 20px;
+
+}
+
+
+h1{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.check{
+    padding:10px;
+    margin:10px;
+}
+
+
+
+
+
+
+
+Project code
+const Project=(
+        <div>
+            <img className="image" src="./reactlogo.png" />
+            <h1>Fun Facts About React</h1>
+            <ul>
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on Github</li>
+                <li>Is mainted by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </div>
+    )
+    ReactDOM.render(Project,document.getElementById("root"));
+
+
+
+
+
+quiz
+
+1-We need to import React from react because JS X syntax is defined inside react.
+2- Console.log(page) returns a JS object with various properties i-e type, key, children, props etc
+3-Only one parental 
+4-what should be done (declarative)
+5- small pieces that can be put together to make something larger/greater
+
+
+
+function Project()
+    {
+        return(
+        <div>
+            <img className="image" src="./reactlogo.png" />
+            <h1>Fun Facts About React</h1>
+            <ul>
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on Github</li>
+                <li>Is mainted by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </div>
+        )
+    }
+    ReactDOM.render(Project(),document.getElementById("root"));
+
+
+
+
+
